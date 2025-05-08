@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/Build/(.*)\\.br$",
+      "source": "/Build/BulboEsc_01.data.br",
       "headers": [
         {
           "key": "Content-Encoding",
@@ -12,6 +12,41 @@
           "value": "application/octet-stream"
         }
       ]
+    },
+    {
+      "source": "/Build/BulboEsc_01.framework.js.br",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "br"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/Build/BulboEsc_01.wasm.br",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "br"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/Build/(.*)\\.br$",
+      "headers": {
+        "Content-Encoding": "br"
+      },
+      "continue": true
     }
   ]
 } 
